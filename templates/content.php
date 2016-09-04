@@ -1,7 +1,7 @@
 <article <?php post_class(); ?>>
   <a href="<?php the_permalink(); ?>">
     <figure>
-      <?php the_post_thumbnail("home-thumbnail");?>
+      <?php the_post_thumbnail("homepage-thumb");?>
     </figure>
   </a>
   <header>
