@@ -3,9 +3,41 @@ a:hover {
 }
 .head-wrapper {
   padding: 30px 25px 25px;
-  .brand img {
-    @include border-top-radius(5px);
-    @include border-bottom-radius(5px);
+  .logo,.nav-primary,.right-nav {
+    vertical-align: middle;
+    float:left;
+    width: auto
+  }
+  .logo{
+    height: 42px;
+    line-height: 42px;
+    .brand img {
+      @include border-top-radius(5px);
+      @include border-bottom-radius(5px);
+      margin-right: 15px;
+    }
+  }
+
+  .right-nav{
+    height: 42px;
+    line-height: 42px;
+    float:right;
+    .search-form {
+      position: relative;
+      .search-field{
+        @include border-top-radius(15px);
+        @include border-bottom-radius(15px);
+        padding-left: 45px;
+      }
+      .search-submit{
+        position: absolute;
+        top: 15px;
+        left: 11px;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+      }
+    }
   }
 }
 .posts-navigation {

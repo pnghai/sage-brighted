@@ -1,4 +1,6 @@
 .home .grid {
+  position: relative;
+  @include clearfix();
   .grid-sizer,.post {
     @include make-sm-column(6);
     @include make-md-column(4);
@@ -35,5 +37,13 @@
         color: $color_storm_dust_approx;
       }
     }
+  }
+  .home-sidebar{
+    right:0;
+    top:0;
+    @include make-sm-column(6);
+    @include make-md-column(4);
+    position: absolute;
+    .upw-posts {position: relative}
   }
 }
