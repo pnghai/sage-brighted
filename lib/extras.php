@@ -28,6 +28,10 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return '';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/*
+ * add thumbnail 300x185, excerpt limited
+ */

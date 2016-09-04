@@ -1,0 +1,39 @@
+.home .grid {
+  .grid-sizer,.post {
+    @include make-sm-column(6);
+    @include make-md-column(4);
+  }
+  .post{
+    .entry-title {
+      font-weight: 400;
+      margin: 0 0 6px;
+    }
+    img {
+      display: block;
+      margin: 0 0 9px;
+      max-width: 100%;
+      @include border-top-radius(9px);
+      @include border-bottom-radius(9px);
+      @include opacity(.6);
+    }
+    .entry-stats {
+      display: inline;
+      a {
+        color: $mercury;
+        font-size: 11px;
+      }
+    }
+    .entry-summary {
+      display: inline;
+    }
+    &:hover {
+      img {
+        @include filter(saturate(1.5));
+        @include opacity(1);
+      }
+      .entry-stats a {
+        color: $color_storm_dust_approx;
+      }
+    }
+  }
+}

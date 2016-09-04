@@ -62,7 +62,14 @@ function widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);
-
+    register_sidebar([
+        'name'          => __('Home sidebar', 'sage'),
+        'id'            => 'home-sidebar',
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ]);
   register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
@@ -84,6 +91,7 @@ function display_sidebar() {
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
+      is_home(),
     is_front_page(),
     is_page_template('template-custom.php'),
   ]);

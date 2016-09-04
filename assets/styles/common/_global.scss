@@ -1,1 +1,35 @@
-
+a:hover {
+  text-decoration: none;
+}
+.head-wrapper {
+  padding: 30px 25px 25px;
+  .brand img {
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
+  }
+}
+.posts-navigation {
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 10px 0;
+  a {
+    font-size: 26px;
+    text-decoration: none;
+    color: $color_endeavour_approx;
+    line-height: 30px;
+    border-bottom: 1px dashed $color_endeavour_approx;
+  }
+}
+footer {
+  font-size: 14px;
+  .container {
+    border-top: 1px solid $color_pink_swan_approx;
+    > section {
+      padding: 30px 40px 85px;
+    }
+  }
+  a {
+    color: $color_endeavour_approx;
+    text-decoration: underline;
+  }
+}
