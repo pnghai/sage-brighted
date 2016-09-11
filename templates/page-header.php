@@ -1,5 +1,5 @@
 <?php use Roots\Sage\Titles; ?>
 
-<div class="page-header">
-  <h1><?= Titles\title(); ?></h1>
+<div class="mypage-header">
+  <h1 class="theme-title"><span><?= Titles\title(); ?></span><hr class="gradient-hr"></h1>
 </div>

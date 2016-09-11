@@ -31,6 +31,32 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        var $container = $('#home-grid');
+        var ias = $.ias({
+          container: "#home-grid",
+          item: "article",
+          pagination: ".nav-links",
+          next: ".nav-links .nav-previous a",
+          delay: 1200
+        });
+
+        ias.on('render', function(items) {
+          $(items).css({ opacity: 0 });
+        });
+
+        ias.on('rendered', function(items) {
+          var $items= $(items);
+          $container.masonry( 'appended', $items);
+        });
+        ias.extension(new IASTriggerExtension({
+          text: 'Bài viết cũ hơn' // optionally
+        }));
+        ias.extension(new IASSpinnerExtension({
+          html: '<div class="ias-spinner" style="text-align: center;"><div class="uil-ring-css" style="transform:scale(0.37);"><div></div>'
+        }));
+        ias.extension(new IASNoneLeftExtension({
+          html: '<div class="ias-noneleft" style="text-align:center"><p><em>Xem bai top.</em></p></div>'
+        }));
       }
     },
     // About us page, note the change from about-us to about_us.

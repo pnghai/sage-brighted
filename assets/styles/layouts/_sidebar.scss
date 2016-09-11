@@ -1,0 +1,34 @@
+.home-sidebar{
+  .widget{
+    h3 {
+      padding:0 0 .5em 1em;
+      text-indent: -.7em;
+      &:before {
+        content: "• ";
+        color: $brand-accent;
+      }
+    }
+    &.widget_ultimate_posts{
+      ul{
+        li {
+          margin-bottom:30px;
+          .upw-image {
+            float: left;margin-right:27px;
+            img {
+              @include border-top-radius(12px);
+              @include border-bottom-radius(12px);
+              width: 70px;
+              height: 70px
+            }
+          }
+          @include clearfix();
+          &:hover{
+            .upw-stats a{
+              color:#000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

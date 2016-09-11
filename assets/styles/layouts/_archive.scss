@@ -1,0 +1,120 @@
+//colors
+$color_tapa_approx: #737373;
+$white: #fff;
+$color_supernova_approx: #f6c608;
+.archive, .search-results{
+  .theme-title {
+    font-size: 16px;
+    padding: 0 0 20px 17px;
+    position: relative;
+    color: $color_tapa_approx;
+    font-weight: normal;
+    margin: -9px 0 0;
+    span {
+      position: relative;
+      background: $white;
+      z-index: 5;
+      padding: 0 22px 0 0;
+    }
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      overflow: hidden;
+      background: $color_supernova_approx;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 4px;
+    }
+  }
+  hr.gradient-hr {
+    border: 0;
+    height: 2px;
+    margin:18px 0;
+    position:relative;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(10%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+    &:before {
+      content: "";
+      display: block;
+      border-top: solid 1px #f9f9f9;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+    }
+  }
+}
+.search-results{
+  .sp-results-container{margin-top:27px}
+  //colors
+  $color_endeavour_approx: #0064af;
+  $color_cloud_approx: #c4c4c4;
+  $color_storm_dust_approx: #626262;
+  article {
+    overflow: hidden;
+    padding: 0 0 35px;
+    &:last-child {
+      padding: 0 0 20px;
+    }
+  }
+  .sp-results-pic {
+    float: left;
+    margin: 0 24px 0 0;
+    img {
+      display: block;
+      width: 70px;
+      height: 70px;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      @include border-top-radius(9px);
+      @include border-bottom-radius(9px);
+    }
+  }
+  .sp-results-inner {
+    overflow: hidden;
+    h2 {
+      font-size: 18px;margin-top:0;
+      font-weight: normal;
+      padding: 0 0 5px;
+      a {
+        color: $color_endeavour_approx;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    time {
+      color: $color_cloud_approx;
+      font-style: italic;
+      font-size: 12px;
+      padding: 0 0 10px;
+      display: block;
+    }
+    .entry-summary {
+      font-size: 14px;
+      line-height: 20px;
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .sp-empty {
+    font-size: 16px;
+    color: $color_storm_dust_approx;
+    min-height: 520px;
+    padding: 4px 0 0;
+  }
+}

@@ -92,6 +92,8 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
       is_home(),
+      is_archive(),
+      is_search(),
     is_front_page(),
     is_page_template('template-custom.php'),
   ]);

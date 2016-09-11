@@ -14,7 +14,7 @@
   </div>
   <div class="entry-stats">
     <a href="<?php the_permalink(); ?>">
-      <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 1234
+      <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> <?php echo strip_tags(pvc_post_views(0,false));?>
     </a>
   </div>
 </article>

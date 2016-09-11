@@ -11,14 +11,6 @@
         endif;
         ?>
       </nav>
-      <nav class="right-nav">
-        <ul class="wrapper list-inline">
-          <li><a href="#">Video</a></li>
-          <li>
-            <?php echo get_search_form();?>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 </header>

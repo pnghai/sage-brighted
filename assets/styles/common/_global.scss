@@ -2,36 +2,33 @@ a:hover {
   text-decoration: none;
 }
 .head-wrapper {
-  padding: 30px 25px 25px;
-  .logo,.nav-primary,.right-nav {
-    vertical-align: middle;
-    float:left;
-    width: auto
-  }
-  .logo{
+  padding: 30px 15px 25px;
+  .logo {
     height: 42px;
     line-height: 42px;
+    text-align: center;
     .brand img {
       @include border-top-radius(5px);
       @include border-bottom-radius(5px);
-      margin-right: 15px;
     }
   }
 
-  .right-nav{
-    height: 42px;
-    line-height: 42px;
-    float:right;
+  ul.ubermenu-content-block.ubermenu-widget-area.ubermenu-autoclear{list-style: none;padding:0}
+  .ubermenu .ubermenu-widget{padding:6px 20px 6px 25px}
+  .widget_search {
     .search-form {
       position: relative;
       .search-field{
         @include border-top-radius(15px);
         @include border-bottom-radius(15px);
-        padding-left: 45px;
+        padding-left: 36px;
+        height:30px;
+        font-size:13px;
       }
       .search-submit{
         position: absolute;
         top: 15px;
+        margin-top: -8px;
         left: 11px;
         background-color: transparent;
         border: 0;
@@ -39,17 +36,20 @@ a:hover {
       }
     }
   }
-}
-.posts-navigation {
-  text-align: center;
-  margin: 0 0 20px;
-  padding: 10px 0;
-  a {
-    font-size: 26px;
-    text-decoration: none;
-    color: $color_endeavour_approx;
-    line-height: 30px;
-    border-bottom: 1px dashed $color_endeavour_approx;
+
+  @media screen and (min-width: 480px) {
+    display: -webkit-flex;
+    display: flex;
+    .logo {
+      width: 184px;
+    }
+    .nav-primary {
+      -webkit-flex: 1;
+      flex: 1;
+    }
+  }
+  @media screen and (min-width:960px){
+    .search-field{width:150px}
   }
 }
 footer {
@@ -63,5 +63,13 @@ footer {
   a {
     color: $color_endeavour_approx;
     text-decoration: underline;
+  }
+}
+
+.entry-stats,.upw-stats {
+  display: inline;
+  a {
+    color: $mercury;
+    font-size: 11px;
   }
 }

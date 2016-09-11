@@ -1,43 +1,5 @@
 .home .grid {
-  position: relative;
-  @include clearfix();
-  .grid-sizer,.post {
-    @include make-sm-column(6);
-    @include make-md-column(4);
-  }
-  .post{
-    .entry-title {
-      font-weight: 400;
-      margin: 0 0 6px;
-    }
-    img {
-      display: block;
-      margin: 0 0 9px;
-      max-width: 100%;
-      @include border-top-radius(9px);
-      @include border-bottom-radius(9px);
-      @include opacity(.6);
-    }
-    .entry-stats {
-      display: inline;
-      a {
-        color: $mercury;
-        font-size: 11px;
-      }
-    }
-    .entry-summary {
-      display: inline;
-    }
-    &:hover {
-      img {
-        @include filter(saturate(1.5));
-        @include opacity(1);
-      }
-      .entry-stats a {
-        color: $color_storm_dust_approx;
-      }
-    }
-  }
+  margin-bottom:80px;
   .home-sidebar{
     right:0;
     top:0;
@@ -45,5 +7,22 @@
     @include make-md-column(4);
     position: absolute;
     .upw-posts {position: relative}
+  }
+  .ias-spinner, .ias-noneleft,.ias-trigger{
+    position: absolute;
+    bottom: -38px;
+    width: 100%;
+    text-align: center;
+    margin-left: -16px;
+    a {
+      font-size: 26px;
+      text-decoration: none;
+      color: $color_endeavour_approx;
+      line-height: 30px;
+      border-bottom: 1px dashed $color_endeavour_approx;
+    }
+  }
+  .ias-spinner{
+    bottom:-128px;
   }
 }

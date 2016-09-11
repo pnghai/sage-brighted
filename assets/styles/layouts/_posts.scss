@@ -1,0 +1,22 @@
+.single{
+  article{
+    figure{
+      img{
+        @include border-top-radius(15px);
+        @include border-bottom-radius(15px);
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  #comments >div>span {
+      padding:0 0 .5em 1em;
+      text-indent: -.7em;
+      &:before {
+        content: "• ";
+        color: $brand-accent;
+      }
+  }
+}

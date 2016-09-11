@@ -1,0 +1,52 @@
+
+.pag-container {
+  clear: both;
+}
+ul.page-numbers {
+  text-align: center;
+  padding: 0 0 30px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -1px;
+  clear: both;
+  li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+    line-height: 1;
+    color: $color_boulder_approx;
+    letter-spacing: normal;
+    margin: 0 1px;
+    &>span,a {
+      display: block;
+      text-decoration: none;
+      color: $color_boulder_approx;
+      padding: 7px 12px 3px;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 8px;
+      &:hover {
+        background: $color_ecru_white_approx;
+        color: $black;
+      }
+      &.current {
+        background: $color_supernova_approx;
+        color: $black;
+      }
+      &.next {
+        background: $color_ecru_white_approx;
+        color: $black;
+        font-size: 18px;
+        padding: 9px 12px;
+        margin: 0 10px;
+        &:hover span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+}
+.pag-separator {
+  padding: 6px 8px;
+}
